@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}MYSHOP{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+<div class="header">
+    <div class="header_social">
+        <a href="https://stepik.org/users/170711625/courses"><img src="{% static 'image/TG.jpg' %}" alt="" id="logo"></a>
+        <a href="https://web.telegram.org/z/"><img src="{% static 'image/vk_logo.png' %}" alt="" id="logo"></a>
+        <a href="https://www.instagram.com/?hl=ru"><img src="{% static 'image/logo.jpg' %}" alt="" id="logo"></a>
+    </div>
+    <div>
+        <p>tel <span>+375252282282</span></p>
+        <p>tel <span>+375252282282</span></p>
+        <p>tel <span>+375252282282</span></p>
+    </div>
+</div>
+
+{% block content %}
+{% endblock %}
+</body>
+</html>

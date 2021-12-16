@@ -1,0 +1,38 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}
+{% if category %} {{category.name}} {% else %} Продукты {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="sidebar">
+    <h3>
+        Категории
+    </h3>
+    <ul class="'sidebar__categories">
+        <li>
+            <a href="{% url 'shop:product_list' %}">
+                Все категории
+            </a>
+        </li>
+        {% for c in categories %}
+        <li>
+            <a href=""{{c.get_absolute_url}}> {{c.name}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<main class="main">
+    {% for product in products %}
+    <div class="card">
+        <a href="{{ product.get_absolute_url }}"> <img src="{% if product.image %}{% else %}{% static 'image/TG.jpg' %}{% endif %} " alt=""></a>
+        <p>
+            Price: <strong>{product.price}</strong>
+        </p>
+        <p>
+            Description: <span>{product.description}</span>
+        </p>
+    </div>
+    {% endfor %}
+</main>
+{% endblock %}

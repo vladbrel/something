@@ -1,0 +1,25 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}
+{{product.name}}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="wrapper">
+        <div class="picture">
+            <img src="{{product.image}}" alt="">
+        </div>
+        <div class="context_product">
+            <p>Категория:<span>{{category.name}}</span></p>
+            <p>Имя продукта:<span>{{product.name}}</span></p>
+            <p>Количесво:<span>{{product.stock}}</span></p>
+            <p>Описание:<span{{product.description}}></span></p>
+            <p>Цена<span>{{product.price}}</span></p>
+        </div>
+    </div >
+    <div >
+        <button>Добавить в корзину</button>
+    </div>
+</div>
+{% endblock %}

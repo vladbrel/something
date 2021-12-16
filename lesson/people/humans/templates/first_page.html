@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Людишки</title>
+</head>
+<body>
+<h1>Список людей:</h1>
+{% for man in men %}
+<p>{{man.name}}</p>
+<p>{{man.age}}</p>
+<p>{{man.sex}}</p>
+{% endfor %}
+</body>
+</html>
